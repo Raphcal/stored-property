@@ -1,6 +1,6 @@
 # @Stored decorator
 
-Make storing properties in local storage easy.
+Makes storing properties in local storage easy.
 
 ## Examples
 
