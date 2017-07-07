@@ -1,0 +1,23 @@
+{
+  "name": "stored-property",
+  "version": "1.0.0",
+  "author": {
+    "email": "ddaeke-github@yahoo.fr",
+    "name": "Raphaël Calabro"
+  },
+  "description": "Store object properties",
+  "directories": {},
+  "maintainers": [
+    {
+      "email": "ddaeke-github@yahoo.fr",
+    "name": "Raphaël Calabro"
+    }
+  ],
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+      "start": "lite-server"
+  },
+  "devDependencies": {
+      "lite-server": "^2.2.2"
+  }
+}
