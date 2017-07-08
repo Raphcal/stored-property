@@ -21,12 +21,12 @@ export function Stored(params: StoredPropertyParams = {}): PropertyDecorator {
         }
 
         const privateProperty = `_${propertyKey}`;
-        Object.defineProperty(A.prototype, privateProperty, {
+        Object.defineProperty(target, privateProperty, {
             writable: true,
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(A.prototype, propertyKey, {
+        Object.defineProperty(target, propertyKey, {
             get: function () {
                 if (this[privateProperty] === undefined) {
                     const storedValue = storage.getItem(key(this));
