@@ -10,7 +10,9 @@ export function Stored(params: StoredPropertyParams = {}): PropertyDecorator {
 
     return function(target, propertyKey) {
         let key: (self: Object) => string;
-        if (params.keyAttribute) {
+        if (params.key && params.keyAttribute) {
+            key = (self) => `${self[params.key]}${self[params.keyAttribute]}`;
+        } else if (params.keyAttribute) {
             key = (self) => self[params.keyAttribute];
         } else if (params.key) {
             key = () => params.key;
